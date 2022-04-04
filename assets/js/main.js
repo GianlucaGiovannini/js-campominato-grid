@@ -1,22 +1,46 @@
 let playElement = document.getElementById("play");
 
-playElement = document.addEventListener("click", difficultLevel)
+playElement.addEventListener("click", difficultLevel)
 
 function difficultLevel() {
     let valore = document.getElementById("difficult").value;
-    console.log(valore)
+    console.log(valore);
+    if (valore === "facile") {
+        generateGrid('.celle', 'div', 'cella_facile', 100);
+        activateCell('.cella_facile', 'active');
+    } else if (valore === "media") {
+        generateGrid('.celle', 'div', 'cella_media', 81);
+        activateCell('.cella_media', 'active');
+    } else {
+        generateGrid('.celle', 'div', 'cella_difficile', 49);
+        activateCell('.cella_difficile', 'active');
+    }
 }
-
-
 
 function generateGrid(selector, element_name, class_name, number_of_cells) {
     const cellsElement = document.querySelector(selector)
+    cellsElement.innerHTML = "";
     for (let i = 1; i <= number_of_cells; i++) {
         const cell = document.createElement(element_name)
         cell.classList.add(class_name)
         cellsElement.append(cell)
+        let numbToStamp = i;
+        cell.innerHTML = `<span>${i}</span>`;
     }
 }
+
+/* function fillCells(selector) {
+
+    const cells = selectCells(selector)
+
+    for (let i = 0; i <= cells.length; i++) {
+        let cell = cells[i];
+        
+        cell.insertad = insertAdjacentHTML("afterend", `<span>${numbToStamp}</span>`)
+    }
+} */
+
+
 
 
 function selectCells(selector) {
@@ -34,21 +58,3 @@ function activateCell(selector, active_class) {
         })
     }
 }
-
-function fillCells(selector) {
-    const cells = selectCells(selector)
-    for (let i = 0; i <= cells.length; i++) {
-        const cell = cells[i];
-        let numbToStamp = 1 + i;
-        cell.innerHTML = `<span>${numbToStamp}</span>`;
-    }
-}
-
-
-
-
-
-
-generateGrid('.celle', 'div', 'cella_facile', 100)
-activateCell('.cella_facile', 'active')
-fillCells('.cella_facile')
