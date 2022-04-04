@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+    max-height: 100%;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+select {
+    width: 200px;
+}
+
+input {
+    padding: 0.1rem 1.5rem;
+    font-size: 1rem;
+}
+
+#site_header,
+#site_footer {
+    background-color: white;
+}
+
+#site_header img {
+    width: auto;
+    max-height: 3rem;
+    margin-right: 1rem;
+}
+
+.header_container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_container>.left,
+.header_container>.right {
+    display: flex;
+    align-items: center;
+}
+
+#site_main {
+    height: calc(100vh - 80px - 50px - 5px);
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.celle {
+    width: 40%;
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cella_facile {
+    width: calc(100% / 10);
+    border: 1px solid black;
+    aspect-ratio: 1/1;
+}
+
+.cella_media {
+    width: calc(100% / 9);
+    border: 1px solid black;
+    aspect-ratio: 1/1;
+}
+
+.cella_difficile {
+    width: calc(100% / 7);
+    border: 1px solid black;
+    aspect-ratio: 1/1;
+}
+
+.active {
+    background-color: #2196f3;
+}
+
+#site_footer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
