@@ -62,28 +62,29 @@ input {
 }
 
 .celle {
-    width: 40%;
-    background-color: red;
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
 }
 
-.cella_facile {
-    width: calc(100% / 10);
+.celle [class*=cella] {
     border: 1px solid black;
     aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cella_facile {
+    width: calc(100% / 10);
 }
 
 .cella_media {
     width: calc(100% / 9);
-    border: 1px solid black;
-    aspect-ratio: 1/1;
 }
 
 .cella_difficile {
     width: calc(100% / 7);
-    border: 1px solid black;
-    aspect-ratio: 1/1;
 }
 
 .active {
