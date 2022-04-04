@@ -24,7 +24,6 @@ function generateGrid(selector, element_name, class_name, number_of_cells) {
         const cell = document.createElement(element_name)
         cell.classList.add(class_name)
         cellsElement.append(cell)
-        let numbToStamp = i;
         cell.innerHTML = `<span>${i}</span>`;
     }
 }

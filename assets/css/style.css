@@ -62,7 +62,7 @@ input {
 }
 
 .celle {
-    width: 50%;
+    max-width: 35%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -89,6 +89,7 @@ input {
 
 .active {
     background-color: #2196f3;
+    color: white;
 }
 
 #site_footer {
