@@ -29,20 +29,6 @@ function generateGrid(selector, element_name, class_name, number_of_cells) {
     }
 }
 
-/* function fillCells(selector) {
-
-    const cells = selectCells(selector)
-
-    for (let i = 0; i <= cells.length; i++) {
-        let cell = cells[i];
-        
-        cell.insertad = insertAdjacentHTML("afterend", `<span>${numbToStamp}</span>`)
-    }
-} */
-
-
-
-
 function selectCells(selector) {
     const cells = document.querySelectorAll(selector)
     return cells
